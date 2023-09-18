@@ -1,0 +1,37 @@
+<!-- <div *ngIf="movieDetail">
+    <p-card header="{{movieDetail.title}}" subheader="{{movieDetail.producer}}" [style]="{ width: '360px' }">
+        <ng-template pTemplate="header">
+            <img alt="Card" src="./assets/force-awakens.jpg" />
+        </ng-template>
+        <p>
+              {{movieDetail.opening_crawl}}                                                                                                        
+        </p>
+        <p>
+            Created:  {{movieDetail.created | date:'shortDate'}}
+        </p>
+        <ng-template pTemplate="footer">
+            
+        </ng-template>
+    </p-card>
+    
+</div> -->
+<div class="container">
+    <div class="grid pt-5">
+        <div *ngIf="movieDetails$ | async as movieDetail" class="col-4">
+            <p-card header="{{movieDetail.title}}" subheader="{{movieDetail.producer}}" [style]="{ width: '360px' }">
+                <ng-template pTemplate="header">
+                    <!-- <img alt="Card" src="./assets/force-awakens.jpg" /> -->
+                </ng-template>
+                <p>
+                      {{movieDetail.opening_crawl}}                                                                                                        
+                </p>
+                <p>
+                    Created:  {{movieDetail.created | date:'shortDate'}}
+                </p>
+                <ng-template pTemplate="footer">
+                    
+                </ng-template>
+            </p-card>
+        </div>
+    </div>
+</div>

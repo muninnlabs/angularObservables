@@ -1,0 +1,16 @@
+<!-- <ul *ngFor="let movie of movies">
+    <li>{{movie.title}}</li>
+</ul> -->
+<div class="container pt-5">
+    <div class="grid">
+        <div class="col-3">
+            <div *ngIf="movies$ | async as moviesList">
+                <div *ngFor="let movieItem of moviesList" class="list-group">
+                    <a class="list-group-item list-group-item-action" href="{{movieDetailsUrl+movieItem.episode_id}}">
+                        {{movieItem.title}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
